@@ -18,4 +18,4 @@ echo ++$num1;
  $year = null;
  echo $year?:"no";
 
- echo @(30/0); // @屏蔽错误
+ echo @(30/0); // @屏蔽warring错误
