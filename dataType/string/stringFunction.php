@@ -47,3 +47,9 @@ echo substr($password, 0, 6);// 6 表示的是截取的数量
 $say_chinese ="我们都是好孩子，我们都是好孩子，我们都是好孩子，我们都是好孩子，我们都是好孩子";
 echo mb_substr($say_chinese, 0, 5, "utf8");
 
+/**字符串重复 */
+$str = "h";
+echo str_repeat($str, 3);
+
+/**连接字符串 */
+// $str1.%str2
