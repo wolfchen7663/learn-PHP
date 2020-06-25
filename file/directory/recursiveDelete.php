@@ -14,7 +14,7 @@ function copyDir(string $dir, string $to): bool
     return true;
 }
 
-// copyDir('../../../php', '../../../myphp');
+// copyDir('../../../myphp', '../../../php');
 
 
 function delDir(string $dir): bool
@@ -28,4 +28,12 @@ function delDir(string $dir): bool
     return rmdir($dir);
 }
 
-delDir('../../../php');
+// delDir('../../../php');
+
+function moveDir(string $dir, string $to): bool
+{
+    copyDir($dir, $to);
+    return  delDir($dir);
+}
+
+moveDir('../../../myphp', '../../../cw');
