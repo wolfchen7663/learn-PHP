@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    form {
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="validate.php" method="POST">
+    <input type="text" name="captcha" id="" placeholder="验证码不区分大小写"/>
+    <div>
+      <img src="controller.php" alt="验证码" onclick="this.src='controller.php?' + Math.random()" />
+    </div>
+    <button type="submit">提交</button>
+  </form>
+</body>
+
+</html>
