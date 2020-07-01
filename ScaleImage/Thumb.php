@@ -15,7 +15,7 @@ class Thumb
         imagecopyresampled($resPaint, $resImage, 0, 0, 0, 0, $info[0], $info[1], $info[2], $info[3]);
         $this->saveAction($image)($resPaint, $filename);
     }
-    //get size 这里是重点
+    //get size 取得画布的实时宽高 这里是重点
     protected function getSize(int $pw, int $ph, int $iw, int $ih, int $type)
     {
         switch ($type) {
