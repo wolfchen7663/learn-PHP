@@ -16,7 +16,7 @@ class Father
     {
         switch ($name) {
             case 'getAll':
-                return call_user_func_array([new self(), 'all'], $arguments);
+                return call_user_func_array([new self, 'all'], $arguments);
                 break;
         }
     }
