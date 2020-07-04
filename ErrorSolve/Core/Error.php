@@ -2,6 +2,7 @@
 
 namespace Core;
 
+date_default_timezone_set("PRC");
 class Error
 {
     protected $debug;
@@ -30,7 +31,7 @@ class Error
                     include 'Views/notice.php';
                 } else {
                     //使用日志保存
-                    $file = 'logs/' . date("Y_m-d") . '.log';
+                    $file = 'logs/' . date("Y_m_d") . '.log';
                     error_log(date('[c]') . $msg . PHP_EOL, 3, $file);
                 }
                 break;
